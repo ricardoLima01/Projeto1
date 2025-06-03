@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vestido Midi Canelado - Eloisa</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <div class="logo">Eloisa</div>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../portfolio.html">Portfólio</a></li>
+                <li><a href="../quem-somos.html">Quem Somos</a></li>
+                <li><a href="../trabalhe-conosco.html">Trabalhe Conosco</a></li>
+                <li><a href="../lancamentos.html">Lançamentos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="produto-detalhes">
+            <a href="../portfolio.html" class="voltar">← Voltar para o Portfólio</a>
+            
+            <div class="produto-grid">
+                <div class="produto-imagem-principal">
+                    <div class="carrossel">
+                        <button class="carrossel-anterior">&#10094;</button>
+                        <div class="carrossel-imagens">
+                            <img src="../assets/Vestido1.png" class="ativa">
+                            <img src="../assets/Vestido2.png">
+                        </div>
+                        <button class="carrossel-proximo">&#10095;</button>
+                    </div>
+                </div>
+                
+                <div class="produto-info-detalhada">
+                    <h1>Vestido Midi Canelado</h1>
+                    <p class="preco">R$ 199,90</p>
+                    <p class="descricao">Vestido midi canelado para ocasiões especiais. Confeccionado em tecido de alta qualidade, com caimento perfeito e acabamento impecável.</p>
+                    
+                    <div class="especificacoes">
+                        <h2>Especificações</h2>
+                        <ul>
+                            <li>Material: 95% Poliéster, 5% Elastano</li>
+                            <li>Composição: Tecido leve e fluido</li>
+                            <li>Lavagem: Lavar à mão ou máquina (máximo 30°C)</li>
+                            <li>Medidas do manequim: Altura 1,70m</li>
+                        </ul>
+                    </div>
+
+                    <div class="cores-disponiveis">
+                        <h2>Cores Disponíveis</h2>
+                        <div class="cores-grid">
+                            <div class="cor-circulo" title="Preto" style="background: #222;"></div>
+                            <div class="cor-circulo" title="Azul Marinho" style="background: #1e3a5c;"></div>
+                            <div class="cor-circulo" title="Vermelho" style="background: #c0392b;"></div>
+                            <div class="cor-circulo" title="Verde Esmeralda" style="background: #2ecc71;"></div>
+                            <div class="cor-circulo" title="Branco" style="background: #fff; border: 1px solid #ccc;"></div>
+                            <div class="cor-circulo" title="Rosa" style="background: #e75480;"></div>
+                        </div>
+                    </div>
+
+                    <div class="tamanhos-disponiveis">
+                        <h2>Tamanhos Disponíveis</h2>
+                        <div class="tamanhos-grid">
+                            <div class="tamanho-quadrado">P</div>
+                            <div class="tamanho-quadrado">M</div>
+                            <div class="tamanho-quadrado">G</div>
+                            <div class="tamanho-quadrado">GG</div>
+                        </div>
+                    </div>
+
+                    <div class="disponibilidade">
+                        <h2>Disponibilidade</h2>
+                        <p>Este produto está disponível em nossa loja física. Visite-nos para experimentar e garantir o tamanho perfeito para você!</p>
+                        <p>Endereço: Rua das Flores, 123 - Centro, São Paulo/SP</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Eloisa - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        const imagens = document.querySelectorAll('.carrossel-imagens img');
+        const anterior = document.querySelector('.carrossel-anterior');
+        const proximo = document.querySelector('.carrossel-proximo');
+        let indice = 0;
+
+        function mostrarImagem() {
+            imagens.forEach(img => img.classList.remove('ativa'));
+            imagens[indice].classList.add('ativa');
+        }
+
+        anterior.addEventListener('click', () => {
+            indice = (indice - 1 + imagens.length) % imagens.length;
+            mostrarImagem();
+        });
+
+        proximo.addEventListener('click', () => {
+            indice = (indice + 1) % imagens.length;
+            mostrarImagem();
+        });
+    </script>
+</body>
+</html> 

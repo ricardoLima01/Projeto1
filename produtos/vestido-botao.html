@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vestido Chemise Botões - Eloisa</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <div class="logo">Eloisa</div>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../portfolio.html">Portfólio</a></li>
+                <li><a href="../quem-somos.html">Quem Somos</a></li>
+                <li><a href="../trabalhe-conosco.html">Trabalhe Conosco</a></li>
+                <li><a href="../lancamentos.html">Lançamentos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="produto-detalhes">
+            <a href="../portfolio.html" class="voltar">← Voltar para o Portfólio</a>
+            <div class="produto-grid">
+                <div class="produto-imagem-principal">
+                    <div class="carrossel">
+                        <button class="carrossel-anterior">&#10094;</button>
+                        <div class="carrossel-imagens">
+                            <img src="../assets/Vestido com botao1.png" class="ativa">
+                            <img src="../assets/Vestido com botao2.png">
+                        </div>
+                        <button class="carrossel-proximo">&#10095;</button>
+                    </div>
+                </div>
+                <div class="produto-info-detalhada">
+                    <h1>Vestido Chemise Botões</h1>
+                    <p class="preco">R$ 199,90</p>
+                    <p class="descricao">Vestido chemise com botões frontais, ideal para o dia a dia. Tecido leve, confortável e com ótimo caimento.</p>
+                    <div class="especificacoes">
+                        <h2>Especificações</h2>
+                        <ul>
+                            <li>Material: 100% Algodão</li>
+                            <li>Lavagem: Lavar à mão</li>
+                            <li>Comprimento: Curto</li>
+                            <li>Detalhes: Botões frontais, manga curta</li>
+                        </ul>
+                    </div>
+                    <div class="cores-disponiveis">
+                        <h2>Cores Disponíveis</h2>
+                        <div class="cores-grid">
+                            <div class="cor-circulo" title="Verde" style="background: #27ae60;"></div>
+                            <div class="cor-circulo" title="Preto" style="background: #222;"></div>
+                            <div class="cor-circulo" title="Branco" style="background: #fff; border: 1px solid #ccc;"></div>
+                            <div class="cor-circulo" title="Azul" style="background: #1e4e8c;"></div>
+                        </div>
+                    </div>
+                    <div class="tamanhos-disponiveis">
+                        <h2>Tamanhos Disponíveis</h2>
+                        <div class="tamanhos-grid">
+                            <div class="tamanho-quadrado">P</div>
+                            <div class="tamanho-quadrado">M</div>
+                            <div class="tamanho-quadrado">G</div>
+                        </div>
+                    </div>
+                    <div class="disponibilidade">
+                        <h2>Disponibilidade</h2>
+                        <p>Este produto está disponível em nossa loja física. Visite-nos para experimentar e garantir o tamanho perfeito para você!</p>
+                        <p>Endereço: Rua das Flores, 123 - Centro, São Paulo/SP</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Eloisa - Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        const imagens = document.querySelectorAll('.carrossel-imagens img');
+        const anterior = document.querySelector('.carrossel-anterior');
+        const proximo = document.querySelector('.carrossel-proximo');
+        let indice = 0;
+
+        function mostrarImagem() {
+            imagens.forEach(img => img.classList.remove('ativa'));
+            imagens[indice].classList.add('ativa');
+        }
+
+        anterior.addEventListener('click', () => {
+            indice = (indice - 1 + imagens.length) % imagens.length;
+            mostrarImagem();
+        });
+
+        proximo.addEventListener('click', () => {
+            indice = (indice + 1) % imagens.length;
+            mostrarImagem();
+        });
+    </script>
+</body>
+</html> 
