@@ -24,13 +24,9 @@
             <a href="../portfolio.html" class="voltar">← Voltar para o Portfólio</a>
             <div class="produto-grid">
                 <div class="produto-imagem-principal">
-                    <div class="carrossel">
-                        <button class="carrossel-anterior">&#10094;</button>
-                        <div class="carrossel-imagens">
-                            <img src="../assets/Blusa azul1.png" class="ativa">
-                            <img src="../assets/Blusa azul2.png">
-                        </div>
-                        <button class="carrossel-proximo">&#10095;</button>
+                    <div class="imagens-container">
+                        <img src="../assets/Blusa azul1.png">
+                        <img src="../assets/Blusa azul2.png">
                     </div>
                 </div>
                 <div class="produto-info-detalhada">
@@ -77,26 +73,5 @@
     <footer>
         <p>&copy; 2024 Eloisa - Todos os direitos reservados.</p>
     </footer>
-    <script>
-        const imagens = document.querySelectorAll('.carrossel-imagens img');
-        const anterior = document.querySelector('.carrossel-anterior');
-        const proximo = document.querySelector('.carrossel-proximo');
-        let indice = 0;
-
-        function mostrarImagem() {
-            imagens.forEach(img => img.classList.remove('ativa'));
-            imagens[indice].classList.add('ativa');
-        }
-
-        anterior.addEventListener('click', () => {
-            indice = (indice - 1 + imagens.length) % imagens.length;
-            mostrarImagem();
-        });
-
-        proximo.addEventListener('click', () => {
-            indice = (indice + 1) % imagens.length;
-            mostrarImagem();
-        });
-    </script>
 </body>
 </html> 
